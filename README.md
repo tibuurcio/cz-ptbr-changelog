@@ -1,8 +1,6 @@
-# cz-conventional-changelog
+# cz-ptbr-changelog
+Commitizen adapter para projetos escritos em pt-BR que seguem o formato conventional-changelog. Ver [commitizen](https://github.com/commitizen/cz-cli) para mais informações.
 
-Status:
-[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog)
-[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog&from=2015-08-01)
-[![Build Status](https://img.shields.io/travis/commitizen/cz-conventional-changelog.svg?style=flat-square)](https://travis-ci.org/commitizen/cz-conventional-changelog)
-
-Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/stevemao/conventional-changelog-angular/blob/master/index.js) standard.
+[![travis build status](https://img.shields.io/travis/tibuurcio/cz-ptbr-changelog.svg)](https://travis-ci.org/tibuurcio/cz-ptbr-changelog)
+[![npm version](https://img.shields.io/npm/v/cz-ptbr-changelog.svg)](https://www.npmjs.com/package/cz-ptbr-changelog)
+![MIT license](https://img.shields.io/npm/l/cz-ptbr-changelog.svg)
