@@ -1,6 +1,6 @@
 {
   "name": "cz-ptbr-changelog",
-  "version": "0.0.0-semantically-released.0",
+  "version": "0.0.0-semantically-released",
   "description": "Commitizen adapter para projetos escritos em pt_BR que seguem o formato conventional-changelog.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,9 @@
   },
   "devDependencies": {
     "commitizen": "2.9.6",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.6"
+  },
+  "czConfig":{
+    "path": "./"
   }
 }
