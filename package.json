@@ -1,7 +1,7 @@
 {
   "name": "cz-ptbr-changelog",
   "version": "0.0.0-semantically-released",
-  "description": "Commitizen adapter para projetos escritos em pt_BR que seguem o formato conventional-changelog.",
+  "description": "Commitizen adapter para projetos escritos em pt-br que seguem o formato conventional-changelog.",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
