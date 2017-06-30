@@ -15,7 +15,6 @@ var filter = function(array) {
 // We use Commonjs here, but ES6 or AMD would do just
 // fine.
 module.exports = function (options) {
-
   var types = options.types;
 
   var length = longest(Object.keys(types)).length + 1;
@@ -39,41 +38,36 @@ module.exports = function (options) {
     // By default, we'll de-indent your commit
     // template and will keep empty lines.
     prompter: function(cz, commit) {
-      console.log('\nLine 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.\n');
+      console.log('\nA linha 1 pode conter no máximo 100 caracteres. Todas as outras linhas serão recortadas após 100 caracters.\n');
 
-      // Let's ask some questions of the user
-      // so that we can populate our commit
-      // template.
-      //
-      // See inquirer.js docs for specifics.
-      // You can also opt to use another input
-      // collection library if you prefer.
+      // Perguntas ao usuário para que a mensagem de commit possa ser criada
+      // Ver inquirer.js para documentação específica de quais tipos de perguntas podem ser feitas
       cz.prompt([
         {
           type: 'list',
           name: 'type',
-          message: 'Select the type of change that you\'re committing:',
+          message: 'Selecione o tipo de mudança que está sendo feita no commit:',
           choices: choices
         }, {
           type: 'input',
           name: 'scope',
-          message: 'Denote the scope of this change ($location, $browser, $compile, etc.):\n'
+          message: 'Indique o escopo dessa mudança ($localização, $browser, $compilação, etc.):\n'
         }, {
           type: 'input',
           name: 'subject',
-          message: 'Write a short, imperative tense description of the change:\n'
+          message: 'Escreva uma descrição pequena e suscinta das mudanças:\n'
         }, {
           type: 'input',
           name: 'body',
-          message: 'Provide a longer description of the change:\n'
+          message: 'Escreva uma maior descrição das mudanças:\n'
         }, {
           type: 'input',
           name: 'breaking',
-          message: 'List any breaking changes:\n'
+          message: 'Liste se houver mudanças que podem quebrar versões anteriores:\n'
         }, {
           type: 'input',
           name: 'issues',
-          message: 'List any issues closed by this change:\n'
+          message: 'Liste os issues resolvidos por essa mudança:\n'
         }
       ]).then(function(answers) {
 
@@ -86,17 +80,18 @@ module.exports = function (options) {
           width: maxLineWidth
         };
 
-        // parentheses are only needed when a scope is present
+        // Parêntesis só são necessários quando houver um escopo informado
         var scope = answers.scope.trim();
         scope = scope ? '(' + answers.scope.trim() + ')' : '';
 
-        // Hard limit this line
+        // Recortar a linha inicial caso ela possua mais de 100 caracteres
         var head = (answers.type + scope + ': ' + answers.subject.trim()).slice(0, maxLineWidth);
 
         // Wrap these lines at 100 characters
+        // Como raios se traduz wrapped lines?
         var body = wrap(answers.body, wrapOptions);
 
-        // Apply breaking change prefix, removing it if already present
+        // Adiciona o prefixo de breaking changes, removendo o mesmo se já estiver presente
         var breaking = answers.breaking.trim();
         breaking = breaking ? 'BREAKING CHANGE: ' + breaking.replace(/^BREAKING CHANGE: /, '') : '';
         breaking = wrap(breaking, wrapOptions);
