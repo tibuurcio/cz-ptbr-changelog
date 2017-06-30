@@ -1,8 +1,8 @@
 "format cjs";
 
 var engine = require('./engine');
-var tipos = require('./tipos-commit-ptbr');
+var conventionalCommitTypes = require('./tipos-commit-ptbr.json');
 
 module.exports = engine({
-  types: tipos
+  types: conventionalCommitTypes.types
 });

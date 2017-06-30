@@ -59,7 +59,7 @@ module.exports = function (options) {
         }, {
           type: 'input',
           name: 'body',
-          message: 'Escreva uma maior descrição das mudanças:\n'
+          message: 'Escreva uma descrição mais completa das mudanças:\n'
         }, {
           type: 'input',
           name: 'breaking',
