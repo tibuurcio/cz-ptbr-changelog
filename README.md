@@ -17,7 +17,7 @@ Em seguida, inicialize o commitizen com este projeto como convenção de mensage
 
 Quando for commitar alterações, basta utilizar o comando `git cz`.
 
-![git cz output](http://imgur.com/a/y0HUW)
+![git cz output](http://i.imgur.com/nSslMYx.png)
 
 Para mais informações, ver [commitizen](https://github.com/commitizen/cz-cli).
 
