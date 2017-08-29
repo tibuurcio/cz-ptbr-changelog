@@ -11,7 +11,7 @@ Para utilizar esse padrão em seu projeto, tenha certeza de ter o commitizen ins
 
 `npm install commitizen -g`
 
-Em seguida, inicialize o commitizen com este projeto como convenção de mensagens:
+Em seguida, navegue até a pasta do seu projeto e inicialize o commitizen com este projeto como convenção de mensagens:
 
 `commitizen init cz-ptbr-changelog --save-dev --save-exact`
 
